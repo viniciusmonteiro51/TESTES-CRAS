@@ -7,9 +7,9 @@ describe('Pessoas', () => {
         cy.realizarLogin();
     })
 
-  /*  it("Deve cadastrar pessoa com todos os campos preenchidos", () =>{
+    it("Deve cadastrar pessoa com todos os campos preenchidos", () => {
 
-        cy.get('.App_showMenu__T5cwx > .styles_container__3i7hL > .styles_containerLinks__v9CCT > [href="/pessoas/listar"]').click(); 
+        cy.get('.App_showMenu__T5cwx > .styles_container__3i7hL > .styles_containerLinks__v9CCT > [href="/pessoas/listar"]').click();
 
         cy.get(':nth-child(4) > .styles_container__NSLBw > #buscar').click();
 
@@ -51,7 +51,7 @@ describe('Pessoas', () => {
 
     it("Deve retornar msg de campos obrigatórios", () => {
 
-        cy.get('.App_showMenu__T5cwx > .styles_container__3i7hL > .styles_containerLinks__v9CCT > [href="/pessoas/listar"]').click(); 
+        cy.get('.App_showMenu__T5cwx > .styles_container__3i7hL > .styles_containerLinks__v9CCT > [href="/pessoas/listar"]').click();
 
         cy.get(':nth-child(4) > .styles_container__NSLBw > #buscar').click();
 
@@ -79,7 +79,7 @@ describe('Pessoas', () => {
     })
 
     it("Deve buscar uma pessoa pelo CPF e alterar seus dados", () => {
-        
+
         cy.get('.App_showMenu__T5cwx > .styles_container__3i7hL > .styles_containerLinks__v9CCT > [href="/pessoas/listar"] > .styles_containerLinkText__Rz0Qr').click();
 
         cy.get(':nth-child(2) > #nome').type('200.001.849-82');
@@ -92,7 +92,7 @@ describe('Pessoas', () => {
 
         cy.get('[type="submit"]').click();
 
-    })*/
+    })
 
     it("Deve cadastrar atendimento para a pessoa", () => {
 
@@ -126,15 +126,15 @@ describe('Pessoas', () => {
 
         cy.get('.App_showMenu__T5cwx > .styles_container__3i7hL > .styles_containerLinks__v9CCT > [href="/pessoas/listar"] > .styles_containerLinkText__Rz0Qr').click();
 
-         cy.get('.App_showMenu__T5cwx > .styles_container__3i7hL > .styles_containerLinks__v9CCT > [href="/pessoas/listar"] > .styles_containerLinkText__Rz0Qr').click();
+        cy.get('.App_showMenu__T5cwx > .styles_container__3i7hL > .styles_containerLinks__v9CCT > [href="/pessoas/listar"] > .styles_containerLinkText__Rz0Qr').click();
 
-         cy.get(':nth-child(1) > :nth-child(5) > .styles_container__NSLBw > [alt="Ver atendimentos dessa pessoa"]').click();
+        cy.get(':nth-child(1) > :nth-child(5) > .styles_container__NSLBw > [alt="Ver atendimentos dessa pessoa"]').click();
 
-         cy.get(':nth-child(1) > :nth-child(5) > .styles_container__NSLBw > [alt="Editar Atendimento"]').click();
+        cy.get(':nth-child(1) > :nth-child(5) > .styles_container__NSLBw > [alt="Editar Atendimento"]').click();
 
-         cy.get('#dataAtendimento').clear().type('2022-11-21');
+        cy.get('#dataAtendimento').clear().type('2022-11-21');
 
-         cy.get('#dataAtendimento').click();
+        cy.get('#dataAtendimento').click();
     })
 })
 
