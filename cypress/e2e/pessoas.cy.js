@@ -37,7 +37,7 @@ describe('Pessoas', () => {
 
         cy.get('#cidade').type('76980-000');
 
-        cy.get('#nit').type('0101001001');
+        cy.get('#nit').type(cpfAleatorio);
 
         cy.get('#logradouro').type('VInissuam');
 
@@ -47,6 +47,7 @@ describe('Pessoas', () => {
 
         cy.get('[type="submit"]').click();
 
+        cy.wait(3000);
     })
 
     it("Deve retornar msg de campos obrigatórios", () => {
