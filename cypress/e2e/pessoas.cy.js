@@ -103,7 +103,7 @@ describe('Pessoas', () => {
         cy.get(':nth-child(3) > .styles_container__NSLBw > #buscar').click();
 
         cy.wait(3000);
-        
+
         cy.get('[alt="Cadastrar atendimento"]').click()
 
         cy.get('#dataAtendimento').type('2023-12-20');
@@ -115,7 +115,7 @@ describe('Pessoas', () => {
         cy.get('[type="submit"]').click();
     })
 
-    /*it("Deve visualizar os dados da pessoa", () => {
+    it("Deve visualizar os dados da pessoa", () => {
 
         cy.get('.App_showMenu__T5cwx > .styles_container__3i7hL > .styles_containerLinks__v9CCT > [href="/pessoas/listar"] > .styles_containerLinkText__Rz0Qr').click();
 
@@ -135,6 +135,6 @@ describe('Pessoas', () => {
          cy.get('#dataAtendimento').clear().type('2022-11-21');
 
          cy.get('#dataAtendimento').click();
-    })*/
+    })
 })
 
